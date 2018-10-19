@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Urna Eletrônica</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+	<div class="container-urna">
+		<div class="container-painel">
+			<div class="container-resultado" id="container-resultado">
+				<h3>Total de Votos</h3>
+				<label>Deadpool: </label><span id="deapool"></span>
+				<br>
+				<label>Cyborg: </label><span id="cyborg"></span>
+				<br>
+				<label>Robin: </label><span id="robin"></span>
+				<br>
+				<label>Ravena: </label><span id="ravena"></span>
+				<br>
+				<label>Estrelar: </label><span id="estrelar"></span>
+				<br>
+				<label>Mutano: </label><span id="mutano"></span>
+				<br>
+				<label>Brancos: </label><span id="brancos"></span>
+				<br>
+				<label>Nulos: </label><span id="nulos"></span>
+				<br>
+				<button class="restart" onclick="inicio()">
+					Nova Votação
+				</button>
+			</div>
+			<div class="fim-voto" id="fim-voto">
+				<h1>FIM</h1>
+			</div>
+			<div class="container-hidden" id="container-hidden">
+				<div class="container-info">
+					<h5>SEU VOTO PARA PRESIDENTE</h5>
+					<br>
+					<label>Número: </label>
+					<input class="input-number" type="number" value="" id="digito1" disabled>
+					<input class="input-number" type="number" value="" id="digito2" disabled>
+					<br>
+					<br>
+					<label>Nome: </label><span id="nome"></span>
+					<br>
+					<label>Partido: </label><span id="partido"></span>
+				</div>
+				<div class="container-foto">
+					<img src="img/branco.jpg" alt="deadpool" id="imgPresidente">
+				</div>
+			</div>
+			<div class="container-instrucao">
+				<div class="intrucao">
+					<p>Aperte a tecla:</p>
+					<p>VERDE para CONFIRMAR esse voto</p>
+					<p>LARANJA para REINICIAR esse voto</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-teclado">
+			<div class="container-numbers">
+				<div class="teclas">
+					<div class="tecla-number tecla-cursor" id="tecla-1" onclick="digitado(this.id)">1</div>
+					<div class="tecla-number tecla-cursor" id="tecla-2" onclick="digitado(this.id)">2</div>
+					<div class="tecla-number tecla-cursor" id="tecla-3" onclick="digitado(this.id)">3</div>
+					<div class="tecla-number tecla-cursor" id="tecla-4" onclick="digitado(this.id)">4</div>
+					<div class="tecla-number tecla-cursor" id="tecla-5" onclick="digitado(this.id)">5</div>
+					<div class="tecla-number tecla-cursor" id="tecla-6" onclick="digitado(this.id)">6</div>
+					<div class="tecla-number tecla-cursor" id="tecla-7" onclick="digitado(this.id)">7</div>
+					<div class="tecla-number tecla-cursor" id="tecla-8" onclick="digitado(this.id)">8</div>
+					<div class="tecla-number tecla-cursor" id="tecla-9" onclick="digitado(this.id)">9</div>
+					<div class="tecla-number tecla-hidden"></div>
+					<div class="tecla-number tecla-cursor" id="tecla-0" onclick="digitado(this.id)">0</div>
+					<div class="tecla-number tecla-hidden"></div>
+				</div>
+			</div>
+			<div class="container-actions">
+				<div class="tecla-action action-branco" onclick="votoBranco()">
+					BRANCO
+				</div>
+				<div class="tecla-action action-corrige" onclick="corrigir()">
+					CORRIGE
+				</div>
+				<div class="tecla-action action-confirma" onclick="confirmar()">
+					CONFIRMA
+				</div>
+			<div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
